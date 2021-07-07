@@ -1,0 +1,8 @@
+node_modules
+
+*.PNG
+*.jpg
+*.pdf
+*Key.json
+test*.json
+*.txt
