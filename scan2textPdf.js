@@ -1,7 +1,14 @@
 // Imports the Google Cloud client libraries
 const vision = require('@google-cloud/vision').v1;
 
-async function pdfExtraction () {
+/**
+ * Extracts text from pdf file.
+ * 
+ * @param bucketName GCP bucket where pdf file is saved. 
+ * @param fileName Name of the file in gcp bucket.
+ * @param outputPrefix The folder in gcp bucket where output json is going to be stored.
+ */
+async function pdfExtraction (bucketName, fileName, outputPrefix) {
     // Creates a client
     const client = new vision.ImageAnnotatorClient();
 

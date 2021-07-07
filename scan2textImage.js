@@ -2,6 +2,12 @@
 const vision = require('@google-cloud/vision');
 const fs = require('fs');
 
+/**
+ * Extracts text from an image.
+ * 
+ * @param fileName File name (with path if not located in this directory) of the image.
+ * @param outputFileName The output file (with path if not intended to be located in this directory) where the text will be saved.
+ */
 async function detectText(fileName, outputFileName) {
     // Creates a client
     const client = new vision.ImageAnnotatorClient();
